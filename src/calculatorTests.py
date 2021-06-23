@@ -26,6 +26,9 @@ class CalculatorTestCase(unittest.TestCase):
         self.assertEqual(self.Calculator.divide(2, 2), 1)
         self.assertEqual(self.Calculator.result, 1)
 
+    def test_squareMethod(self):
+        self.assertEqual(self.Calculator.square(2), 4)
+        self.assertEqual(self.Calculator.result, 4)
 
 
 

@@ -25,6 +25,11 @@ class Calculator:
         c = a/b
         return c
 
+    @staticmethod
+    def squaring(a):
+        c = a**2
+        return c
+
     def add(self, a, b):
         self.result = self.addition(a,b)
         return self.result
@@ -41,7 +46,9 @@ class Calculator:
         self.result = self.division(a, b)
         return self.result
 
-
+    def square(self, a):
+        self.result = self.squaring(a)
+        return self.result
 
 
 
