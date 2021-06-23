@@ -30,6 +30,11 @@ class CalculatorTestCase(unittest.TestCase):
         self.assertEqual(self.Calculator.square(2), 4)
         self.assertEqual(self.Calculator.result, 4)
 
+    def test_squareRootMethod(self):
+        self.assertEqual(self.Calculator.sqrt(4), 2)
+        self.assertEqual(self.Calculator.result, 2)
+
+
 
 
 if __name__ == '__main__':

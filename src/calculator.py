@@ -1,3 +1,4 @@
+import math
 
 class Calculator:
     result = 0
@@ -30,6 +31,13 @@ class Calculator:
         c = a**2
         return c
 
+    @staticmethod
+    def square_root(a):
+        c = math.sqrt(a)
+        return c
+
+
+
     def add(self, a, b):
         self.result = self.addition(a,b)
         return self.result
@@ -50,6 +58,9 @@ class Calculator:
         self.result = self.squaring(a)
         return self.result
 
+    def sqrt(self, a):
+        self.result = self.square_root(a)
+        return self.result
 
 
 
