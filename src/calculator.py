@@ -20,6 +20,11 @@ class Calculator:
         c = a * b
         return c
 
+    @staticmethod
+    def division(a,b):
+        c = a/b
+        return c
+
     def add(self, a, b):
         self.result = self.addition(a,b)
         return self.result
@@ -31,6 +36,12 @@ class Calculator:
     def multiply(self, a, b):
         self.result = self.multiplication(a, b)
         return self.result
+
+    def divide(self, a, b):
+        self.result = self.division(a, b)
+        return self.result
+
+
 
 
 
