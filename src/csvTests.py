@@ -9,14 +9,14 @@ class CalculatorCsvTest(unittest.TestCase):
 
     def test_csvReader_addition(self):
         self.csv_reader = CsvReader('./src/addition.csv')
-        add_data = self.csv_reader.return_data_as_integer()
-        for row in add_data:
+        data = self.csv_reader.return_data_as_integer()
+        for row in data:
             self.assertEqual(self.Calculator.add(row['a'], row['b']), row['result'])
 
     def test_csvReader_subtraction(self):
         self.csv_reader = CsvReader('./src/subtraction.csv')
-        subtract_data = self.csv_reader.return_data_as_integer()
-        for row in subtract_data:
+        data = self.csv_reader.return_data_as_integer()
+        for row in data:
             self.assertEqual(self.Calculator.subtract(row['a'], row['b']), row['result'])
 
     def test_csvReader_multiplication(self):
