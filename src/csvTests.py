@@ -1,7 +1,6 @@
 import unittest
 from csvReader import CsvReader
 from calculator import Calculator
-from pprint import pprint
 
 class CalculatorCsvTest(unittest.TestCase):
 
@@ -10,33 +9,39 @@ class CalculatorCsvTest(unittest.TestCase):
 
     def test_csvReader_addition(self):
         self.csv_reader = CsvReader('./src/addition.csv')
-        for values in self.csv_reader.int_values:
-            self.assertEqual(self.Calculator.add(values['a'], values['b']), values['result'])
+        add_data = self.csv_reader.return_data_as_integer()
+        for row in add_data:
+            self.assertEqual(self.Calculator.add(row['a'], row['b']), row['result'])
 
     def test_csvReader_subtraction(self):
         self.csv_reader = CsvReader('./src/subtraction.csv')
-        for values in self.csv_reader.int_values:
-            self.assertEqual(self.Calculator.add(values['a'], values['b']), values['result'])
+        subtract_data = self.csv_reader.return_data_as_integer()
+        for row in subtract_data:
+            self.assertEqual(self.Calculator.subtract(row['a'], row['b']), row['result'])
 
     def test_csvReader_multiplication(self):
         self.csv_reader = CsvReader('./src/multiplication.csv')
-        for values in self.csv_reader.int_values:
-            self.assertEqual(self.Calculator.add(values['a'], values['b']), values['result'])
+        data = self.csv_reader.return_data_as_integer()
+        for row in data:
+            self.assertEqual(self.Calculator.multiply(row['a'], row['b']), row['result'])
 
     def test_csvReader_division(self):
         self.csv_reader = CsvReader('./src/division.csv')
-        for values in self.csv_reader.int_values:
-            self.assertEqual(self.Calculator.add(values['a'], values['b']), values['result'])
+        data = self.csv_reader.return_data_as_integer()
+        for row in data:
+            self.assertEqual(self.Calculator.divide(row['a'], row['b']), row['result'])
 
     def test_csvReader_squaring(self):
         self.csv_reader = CsvReader('./src/square.csv')
-        for values in self.csv_reader.int_values:
-            self.assertEqual(self.Calculator.add(values['a'], values['b']), values['result'])
+        data = self.csv_reader.return_data_as_integer()
+        for row in data:
+            self.assertEqual(self.Calculator.square(row['a']), row['result'])
 
     def test_csvReader_sqrt(self):
         self.csv_reader = CsvReader('./src/square_root.csv')
-        for values in self.csv_reader.int_values:
-            self.assertEqual(self.Calculator.add(values['a'], values['b']), values['result'])
+        data = self.csv_reader.return_data_as_integer()
+        for row in data:
+            self.assertEqual(self.Calculator.sqrt(row['a']), row['result'])
 
 if __name__ == '__main__':
     unittest.main()

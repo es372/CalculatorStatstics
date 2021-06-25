@@ -39,7 +39,7 @@ class Calculator:
 
 
     def add(self, a, b):
-        self.result = self.addition(a,b)
+        self.result = self.addition(a, b)
         return self.result
 
     def subtract(self, a, b):
