@@ -20,3 +20,6 @@ class CsvReader:
             self.int_values.append(self.integer_conversion(row['a'], row['b'], row['result']))
 
         return self.int_values
+
+
+

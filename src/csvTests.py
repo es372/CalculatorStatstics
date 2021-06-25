@@ -13,6 +13,10 @@ class CalculatorCsvTest(unittest.TestCase):
         for values in self.csv_reader.int_values:
             self.assertEqual(self.Calculator.add(values['a'], values['b']), values['result'])
 
+    def test_csvReader_subtraction(self):
+        self.csv_reader = CsvReader('./src/subtraction.csv')
+        for values in self.csv_reader.int_values:
+            self.assertEqual(self.Calculator.add(values['a'], values['b']), values['result'])
 
 
 if __name__ == '__main__':
