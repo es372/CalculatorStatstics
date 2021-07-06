@@ -1,12 +1,15 @@
 import csv
+from pathlib import Path
 
 class CsvReader:
     text_data = []
 
     def __init__(self, filepath):
-        with open(filepath) as csv_file:
+        self.text_data = []
+        relative = Path(filepath)
+        absolute = relative.absolute()
+        with open(absolute) as csv_file:
             csv_data = csv.DictReader(csv_file)
-            self.text_data = []
             for row in csv_data:
                 self.text_data.append(row)
 
