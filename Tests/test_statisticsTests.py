@@ -1,4 +1,3 @@
-from __future__ import absolute_import
 import unittest
 from Statistics.statistics import Statistics
 from RNG.get_dataset import generate_sample

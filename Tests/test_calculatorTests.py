@@ -1,4 +1,3 @@
-from __future__ import absolute_import
 import unittest
 from Calculator.calculator import Calculator
 
