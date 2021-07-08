@@ -24,5 +24,6 @@ class StatisticsTestCase(unittest.TestCase):
         mean = self.statistics.mean(self.testData)
         self.assertEqual(mean, 4.72)
 
+
 if __name__ == '__main__':
     unittest.main()

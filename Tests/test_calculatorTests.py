@@ -25,6 +25,11 @@ class CalculatorTestCase(unittest.TestCase):
     def test_divisionMethod(self):
         self.assertEqual(self.Calculator.divide(2, 2), 1)
         self.assertEqual(self.Calculator.result, 1)
+        try:
+            self.Calculator.divide()
+        except IndexError:
+            print('Undefined: division by zero')
+
 
     def test_squareMethod(self):
         self.assertEqual(self.Calculator.square(2), 4)
