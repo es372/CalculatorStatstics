@@ -3,7 +3,6 @@ import random
 
 def generate_sample(x, a, b):
     data = []
-    random.seed(6)
     for i in range(x):
         value = round(random.uniform(a,b), 1)
         if value % 1 == 0:

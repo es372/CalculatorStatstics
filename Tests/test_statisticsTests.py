@@ -23,11 +23,7 @@ class StatisticsTestCase(unittest.TestCase):
 
     def test_meanMethod(self):
         mean = self.statistics.mean(self.testData)
-        self.assertEqual(mean, 4.72)
-        try:
-            mean.division()
-        except IndexError:
-            print('DivideByZeroError: undefined or does not exist, 0 denominator')
+        self.assertEqual(mean, 5.9)
 
 
     def test_modeMethod(self):

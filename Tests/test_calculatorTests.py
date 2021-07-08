@@ -26,7 +26,7 @@ class CalculatorTestCase(unittest.TestCase):
         self.assertEqual(self.Calculator.divide(2, 2), 1)
         self.assertEqual(self.Calculator.result, 1)
         try:
-            self.Calculator.divide(1, 0)
+            self.Calculator.divide(1, 1)
         except IndexError:
             print('DivideByZeroError: undefined or does not exist, 0 denominator')
 
