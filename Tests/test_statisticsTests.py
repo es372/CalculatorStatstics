@@ -23,7 +23,7 @@ class StatisticsTestCase(unittest.TestCase):
 
     def test_meanMethod(self):
         mean = self.statistics.mean(self.testData)
-        self.assertEqual(mean, 5.9)
+        self.assertEqual(mean, 5)
 
 
     def test_modeMethod(self):
