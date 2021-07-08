@@ -25,7 +25,6 @@ class StatisticsTestCase(unittest.TestCase):
         mean = self.statistics.mean(self.testData)
         self.assertEqual(mean, 5.83)
 
-
     def test_modeMethod(self):
         mode = self.statistics.mode(self.testData)
         self.assertEqual(mode, 6.1)
