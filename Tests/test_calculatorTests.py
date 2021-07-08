@@ -1,5 +1,3 @@
-import os
-import sys
 import unittest
 from Calculator.calculator import Calculator
 
@@ -7,11 +5,6 @@ class CalculatorTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
         self.Calculator = Calculator()
-        PROJECT_PATH = os.getcwd()
-        SOURCE_PATH = os.path.join(
-            PROJECT_PATH, "Calculator"
-        )
-        sys.path.append(SOURCE_PATH)
 
     def test_instantiate_calculator(self):
         system = Calculator()

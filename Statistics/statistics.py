@@ -1,9 +1,9 @@
 from Calculator.calculator import Calculator
-from mean import mean
-from median import median
-from mode import mode
-from variance import variance
-from standard_deviation import standard_deviation
+from Statistics.mean import mean
+from Statistics.median import median
+from Statistics.mode import mode
+from Statistics.variance import variance
+from Statistics.standard_deviation import standard_deviation
 
 class Statistics(Calculator):
 

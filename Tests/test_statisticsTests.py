@@ -1,5 +1,3 @@
-import os
-import sys
 import unittest
 from Statistics.statistics import Statistics
 from RNG.get_dataset import generate_sample
@@ -8,11 +6,6 @@ from RNG.get_dataset import generate_sample
 class StatisticsTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        PROJECT_PATH = os.getcwd()
-        SOURCE_PATH = os.path.join(
-            PROJECT_PATH, "Statistics"
-        )
-        sys.path.append(SOURCE_PATH)
         self.testData = generate_sample(5, 0, 10)
         self.statistics = Statistics()
 
