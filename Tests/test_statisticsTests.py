@@ -38,6 +38,10 @@ class StatisticsTestCase(unittest.TestCase):
         variance = self.statistics.variance(self.testData)
         self.assertEqual(variance, 9.78)
 
+    def test_standardDeviationMethod(self):
+        standardDev = self.statistics.standard_deviation(self.testData)
+        self.assertEqual(standardDev, 3.13)
+
 
 if __name__ == '__main__':
     unittest.main()
