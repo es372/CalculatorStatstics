@@ -25,8 +25,10 @@ class CalculatorTestCase(unittest.TestCase):
     def test_divisionMethod(self):
         self.assertEqual(self.Calculator.divide(2, 2), 1)
         self.assertEqual(self.Calculator.result, 1)
-        self.assertRaises(tuple('DivisionByZer0Error: undefined or does not exist, 0 denominator'),
-                          self.Calculator.divide, 1, 0)
+        try:
+            self.Calculator.divide(1, 0)
+        except IndexError:
+            print('DivideByZeroError: undefined or does not exist, 0 denominator')
 
 
     def test_squareMethod(self):
