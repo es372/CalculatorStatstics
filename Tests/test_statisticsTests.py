@@ -34,6 +34,10 @@ class StatisticsTestCase(unittest.TestCase):
         median = self.statistics.median(self.testData)
         self.assertEqual(median, 6.1)
 
+    def test_varianceMethod(self):
+        variance = self.statistics.variance(self.testData)
+        self.assertEqual(variance, 9.78)
+
 
 if __name__ == '__main__':
     unittest.main()

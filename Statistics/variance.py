@@ -14,7 +14,7 @@ def variance(list_of_data):
     numerator = subtraction(squaredTotal, division(squaring(total), sample_size))
     denominator = subtraction(sample_size, 1)
 
-    return division(numerator, denominator)
+    return round(division(numerator, denominator), 2)
 
 
 
