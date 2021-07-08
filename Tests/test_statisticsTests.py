@@ -23,12 +23,16 @@ class StatisticsTestCase(unittest.TestCase):
 
     def test_meanMethod(self):
         mean = self.statistics.mean(self.testData)
-        self.assertEqual(mean, 5)
+        self.assertEqual(mean, 5.83)
 
 
     def test_modeMethod(self):
         mode = self.statistics.mode(self.testData)
         self.assertEqual(mode, 6.1)
+
+    def test_medianMethod(self):
+        median = self.statistics.median(self.testData)
+        self.assertEqual(median, 6.1)
 
 
 if __name__ == '__main__':
