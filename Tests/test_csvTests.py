@@ -1,3 +1,5 @@
+import os
+import sys
 import unittest
 from CsvReader.csvReader import CsvReader
 from Calculator.calculator import Calculator
@@ -6,6 +8,11 @@ class CalculatorCsvTest(unittest.TestCase):
 
     def setUp(self) -> None:
         self.Calculator = Calculator()
+        PROJECT_PATH = os.getcwd()
+        SOURCE_PATH = os.path.join(
+            PROJECT_PATH, "CsvReader"
+        )
+        sys.path.append(SOURCE_PATH)
 
     def test_csvReader_addition(self):
         self.csv_reader = CsvReader('./Data(CSV)/addition.csv')
