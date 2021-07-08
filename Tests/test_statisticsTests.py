@@ -7,7 +7,7 @@ from Calculator.calculator import Calculator
 class StatisticsTestCase(unittest.TestCase):
 
     def setUp(self) -> None:
-        self.testData = generate_sample(5, 0, 10)
+        self.testData = generate_sample(11, 0, 10)
         self.statistics = Statistics()
         self.Calculator = Calculator()
 
@@ -28,7 +28,7 @@ class StatisticsTestCase(unittest.TestCase):
 
     def test_modeMethod(self):
         mode = self.statistics.mode(self.testData)
-        self.assertEqual(mode, 'Exception: Numbers in dataset have same frequency.')
+        self.assertEqual(mode, 6.1)
 
 
 if __name__ == '__main__':
