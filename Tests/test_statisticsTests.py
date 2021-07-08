@@ -15,6 +15,10 @@ class StatisticsTestCase(unittest.TestCase):
 
     def test_instantiate_data(self):
         self.assertIsInstance(self.testData, list)
+        try:
+            self.testData
+        except IndexError:
+            print('list contains no data')
 
     def test_meanMethod(self):
         mean = self.statistics.mean(self.testData)
